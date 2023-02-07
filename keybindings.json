@@ -1,0 +1,244 @@
+// mikowls mostly vimish vscode keybindings
+[
+  {
+    "key": "cmd+n",
+    "command": "workbench.action.files.newUntitledFile"
+  },
+  {
+    "key": "cmd+k cmd+t",
+    "command": "workbench.action.selectTheme"
+  },
+  {
+    "key": "ctrl+cmd+,",
+    "command": "workbench.action.openSettingsJson"
+  },
+  {
+    "key": "cmd+shift+k",
+    "command": "workbench.action.nextEditor"
+  },
+  {
+    "key": "cmd+shift+j",
+    "command": "workbench.action.previousEditor"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.terminal.focus"
+  },
+  {
+    "key": "ctrl+`",
+    "command": "workbench.action.focusActiveEditorGroup",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+alt+n",
+    "command": "explorer.newFile"
+  },
+  {
+    "key": "shift+o",
+    "command": "workbench.action.files.openFile",
+    "when": "filesExplorerFocus"
+  },
+  {
+    "key": "ctrl+w h",
+    "command": "workbench.action.focusLeftGroup"
+  },
+  {
+    "key": "ctrl+w l",
+    "command": "workbench.action.focusRightGroup"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.terminal.scrollUp",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.terminal.scrollDown",
+    "when": "terminalFocus"
+  },
+  {
+    "key": "ctrl+cmd+l",
+    "command": "bookmarks.jumpToNext",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+j",
+    "command": "-bookmarks.jumpToPrevious",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "ctrl+cmd+k",
+    "command": "bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "alt+cmd+k",
+    "command": "-bookmarks.toggle",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "cmd+,",
+    "command": "workbench.action.openSettings2"
+  },
+  {
+    "key": "ctrl+alt+j",
+    "command": "merge-conflict.next"
+  },
+  {
+    "key": "ctrl+alt+k",
+    "command": "merge-conflict.previous"
+  },
+  {
+    "key": "shift+cmd+i",
+    "command": "atlascode.jira.searchIssues"
+  },
+  {
+    "key": "shift+cmd+a",
+    "command": "workbench.view.extension.atlascode-drawer"
+  },
+  {
+    "key": "ctrl+cmd+r",
+    "command": "workbench.action.debug.restart",
+    "when": "inDebugMode"
+  },
+  {
+    "key": "shift+cmd+f5",
+    "command": "-workbench.action.debug.restart",
+    "when": "inDebugMode"
+  },
+  // {
+  //     "key": "shift+5",
+  //     "command": "editor.action.jumpToBracket",
+  //     "when": "editorTextFocus"
+  // },
+  {
+    "key": "shift+cmd+\\",
+    "command": "-editor.action.jumpToBracket",
+    "when": "editorTextFocus"
+  },
+  {
+    "key": "shift+cmd+c",
+    "command": "-workbench.action.terminal.openNativeConsole",
+    "when": "!terminalFocus"
+  },
+  {
+    "key": "ctrl+shift+1",
+    "command": "workbench.action.closePanel"
+  },
+  {
+    "key": "shift+cmd+\\",
+    "command": "-workbench.action.terminal.focusTabs",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported || terminalHasBeenCreated && terminalTabsFocus || terminalProcessSupported && terminalTabsFocus"
+  },
+  {
+    "key": "ctrl+w 0",
+    "command": "workbench.action.editorLayoutSingle"
+  },
+  {
+    "key": "alt+k",
+    "command": "editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+up",
+    "command": "-editor.action.moveLinesUpAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+j",
+    "command": "editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "alt+down",
+    "command": "-editor.action.moveLinesDownAction",
+    "when": "editorTextFocus && !editorReadonly"
+  },
+  {
+    "key": "cmd+e l",
+    "command": "editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "alt+f8",
+    "command": "-editor.action.marker.next",
+    "when": "editorFocus"
+  },
+  {
+    "key": "shift+6",
+    "command": "editor.emmet.action.matchTag"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "workbench.action.quickOpenSelectNext",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "workbench.action.quickOpenSelectPrevious",
+    "when": "inQuickOpen"
+  },
+  {
+    "key": "ctrl+j",
+    "command": "selectNextCodeAction",
+    "when": "codeActionMenuVisible || actionWidgetVisible"
+  },
+  {
+    "key": "ctrl+k",
+    "command": "selectPrevCodeAction",
+    "when": "codeActionMenuVisible || actionWidgetVisible"
+  },
+  {
+    "key": "ctrl+cmd+g",
+    "command": "workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "ctrl+shift+g",
+    "command": "-workbench.view.scm",
+    "when": "workbench.scm.active"
+  },
+  {
+    "key": "cmd+k r",
+    "command": "revealFileInOS",
+    "when": "!editorFocus"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "workbench.action.toggleAuxiliaryBar"
+  },
+  {
+    "key": "shift+cmd+b",
+    "command": "-workbench.action.tasks.build",
+    "when": "taskCommandsRegistered"
+  },
+  {
+    "key": "cmd+k a",
+    "command": "workbench.action.toggleActivityBarVisibility"
+  },
+  {
+    "key": "ctrl+cmd+j",
+    "command": "workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+down",
+    "command": "-workbench.action.terminal.resizePaneDown",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+k",
+    "command": "workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  },
+  {
+    "key": "ctrl+cmd+up",
+    "command": "-workbench.action.terminal.resizePaneUp",
+    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  }
+]
