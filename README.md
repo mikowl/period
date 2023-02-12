@@ -7,3 +7,6 @@ my dot files and stuff
   - VSCode settings
   - VSCode key bindings
   - my cute today thing that shows todays calendar and weather
+  - vimrc
+  - karabiner config
+  - kitty config
