@@ -1,0 +1,52 @@
+{
+  "name": "DOIO",
+  "vendorProductId": 4276969568,
+  "macros": [
+    "{KC_LGUI,KC_LSFT,KC_M}",
+    "{KC_LALT,KC_LGUI,KC_U}",
+    "{KC_LALT,KC_LGUI,KC_Y}",
+    "{KC_LCTL,KC_LGUI,KC_P}",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "layers": [
+    ["MACRO00", "MACRO02", "MACRO01", "MO(1)", "MACRO03", "KC_VOLU", "KC_VOLD"],
+    [
+      "KC_TRNS",
+      "RGB_MOD",
+      "RGB_HUI",
+      "RGB_TOG",
+      "KC_TRNS",
+      "KC_MFFD",
+      "RGB_HUI"
+    ],
+    [
+      "RGB_HUD",
+      "KC_TRNS",
+      "KC_TRNS",
+      "RGB_VAI",
+      "RGB_VAD",
+      "KC_TRNS",
+      "KC_TRNS"
+    ],
+    [
+      "KC_VOLU",
+      "KC_VOLD",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS",
+      "KC_TRNS"
+    ]
+  ]
+}
