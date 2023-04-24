@@ -21,12 +21,13 @@ echo "                    \    @@@@@@@@@@@@@@@    /        "
 echo "                       \@@@@@@@@@@@@@@@@@/           "
 echo "             ~~ ~ ~ ~ ~ @@@@@@@@@@@@@@@@@ ~ ~ ~ ~ ~~ "
 printf "${BLUE}"
-figlet "Good morning $USER"
+figlet "Hello $USER"
 printf "${CYAN}"
 shuf -n 1 ${HOME}/Documents/advice.txt
 echo " "
 printf "${YELLOW}"
-curl -s http://wttr.in/\?format\=3
+curl 'wttr.in/Salinas?format=3'
+
 printf "${STOP}"
 echo " "
 icalBuddy -b ⚡ -iep datetime,title -f 'eventsToday'

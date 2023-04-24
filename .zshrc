@@ -1,3 +1,4 @@
+# Fig pre block. Keep at the top of this file.
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -18,6 +19,11 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 
 zle_highlight=('paste:none')
 POWERLEVEL9K_INSTANT_PROMPT=quiet
+# Set list of themes to pick from when loading at random
+# Setting this variable when ZSH_THEME=random will cause zsh to load
+# a theme from this variable instead of looking in ~/.oh-my-zsh/themes/
+# If set to an empty array, this variable will have no effect.
+# ZSH_THEME_RANDOM_CANDIDATES=( "robbyrussell" "agnoster" )
 
 # Uncomment the following line to disable auto-setting terminal title.
 DISABLE_AUTO_TITLE="true"
@@ -27,10 +33,17 @@ function precmd() {
   echo -ne "\e]1;${PWD##*/}\a"
 }
 
+
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
 
-# PLUGINS
+
+# Which plugins would you like to load?
+# Standard cdplugins can be found in ~/.oh-my-zsh/plugins/*
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+# Add wisely, as too many plugins slow down shell startup.
+# not sure if I'm feeling zsh-autosuggestions
 
 plugins=(
 #  autojump 
@@ -49,7 +62,7 @@ plugins=(
   node 
   npm 
   rbenv 
-  #vi-mode 
+  vi-mode 
   vscode 
   web-search 
   #wp-cli 
@@ -139,11 +152,11 @@ export PATH="/usr/local/opt/whois/bin:$PATH"
 
 eval $(thefuck --alias)
 
-# pnpm
-export PNPM_HOME="~/Library/pnpm"
-export PATH="$PNPM_HOME:$PATH"
-# pnpm end
-
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# tabtab source for packages
+# uninstall by removing these lines
+[[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
+export PATH=$PATH:/Users/melias/.spicetify

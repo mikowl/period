@@ -46,18 +46,21 @@ alias docs="cd ~/Documents"
 alias sites="cd ~/Sites"
 alias pics="cd ~/Pictures"
 alias notes="cd ~/Documents/Notes"
-#alias omz="cd ~/.oh-my-zsh"
 alias omzc="cd ~/.oh-my-zsh/custom"
 alias jira="cd ~/Jira"
+alias gjs="cd ~/Sites/vm-www/shopify-us/gjs.local"
+alias gjspro="cd ~/Sites/vm-www/shopify-us/gjs.pro.local"
 
 alias reactdocs="open -a '/Applications/Brave Browser.app' https://beta.reactjs.org"
 alias startvm="vmrun start ~/VM/Ubuntu_20_Gatsby.vmwarevm"
 alias gre="curl -X POST http://gjs.local/__refresh"
+
 # add in vm basha:
 # ENABLE_GATSBY_REFRESH_ENDPOINT=true gatsby develop --host=0.0.0.0
-#alias mountlocal="mount -t nfs -o resvport,rw,nolocks 10.0.0.178:/var/www ~/Sites/vm-www"
-alias mountlocal="sudo mount -t nfs -o resvport,rw,nolocks 10.0.0.210:/var/www ~/Sites/vm-www"
-alias mountlocalwork="sudo mount -t nfs -o resvport,rw,nolocks 10.14.1.235:/var/www ~/Sites/vm-www"
+#alias mountlocal="mount -t nfs -o resvport,rw,nolocks 10.0.0.178:/var/www /Users/melias/Sites/vm-www"
+#alias ifem="ifconfig ens33 mtu 500 up"
+alias mountlocal="sudo mount -t nfs -o resvport,rw,nolocks 10.0.0.210:/var/www /Users/melias/Sites/vm-www"
+alias mountlocalwork="sudo mount -t nfs -o resvport,rw,nolocks 10.14.1.237:/var/www /Users/melias/Sites/vm-www"
 
 alias vmnotes='printf "- vim ~/.ssh/config\n- hosts\n- in vm: staticip (sudo vim /etc/netplan/10-static-ip.yaml)\n- na (sudo netplan apply)\n- four finger swipe up or f3, disconnect all\n- ssh local, gjs, gd\n- mountlocal or mountlocalwork\n " | lolcat'
 
@@ -78,9 +81,11 @@ alias kara="vim ~/.config/karabiner/karabiner.json"
 alias hosts="sudo vim /etc/hosts"
 alias jo="jpegoptim"
 alias cal="icalBuddy -b ⚡ -iep datetime,title -f 'eventsToday'"
-alias today="bash ~/.oh-my-zsh/custom/today/today.zsh"
+alias today="bash /Users/melias/.oh-my-zsh/custom/today/today.zsh"
 alias cre="clear && today"
-alias wordle="npx inkle"
+alias wordle="ssh clidle.duckdns.org -p 3000"
+alias npmcil="npm ci --legacy-peer-deps"
+
 
 # press and hold
 # defaults write org.mozilla.firefoxdeveloperedition ApplePressAndHoldEnabled -bool false
@@ -160,7 +165,7 @@ function wttrin() {
   curl http://wttr.in/$1
 }
 alias weather="curl http://wttr.in/Salinas"
-alias wttr="curl -s http://wttr.in/\?format\=3"
+alias wttr="curl 'wttr.in/Salinas?format=3'"
 
 function lastmod() {
   curl -s -I $1 | grep '^last-modified:'
