@@ -47,6 +47,7 @@
     "command": "workbench.action.focusRightGroup"
   },
   {
+    
     "key": "ctrl+k",
     "command": "workbench.action.terminal.scrollUp",
     "when": "terminalFocus"
@@ -111,20 +112,10 @@
     "command": "-workbench.action.debug.restart",
     "when": "inDebugMode"
   },
-  // {
-  //     "key": "shift+5",
-  //     "command": "editor.action.jumpToBracket",
-  //     "when": "editorTextFocus"
-  // },
   {
     "key": "shift+cmd+\\",
     "command": "-editor.action.jumpToBracket",
     "when": "editorTextFocus"
-  },
-  {
-    "key": "shift+cmd+c",
-    "command": "-workbench.action.terminal.openNativeConsole",
-    "when": "!terminalFocus"
   },
   {
     "key": "ctrl+shift+1",
@@ -171,7 +162,8 @@
   },
   {
     "key": "shift+6",
-    "command": "editor.emmet.action.matchTag"
+    "command": "editor.emmet.action.matchTag",
+    "when": "vim.mode == 'Normal'"
   },
   {
     "key": "ctrl+j",
@@ -237,8 +229,12 @@
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
   },
   {
-    "key": "ctrl+cmd+up",
-    "command": "-workbench.action.terminal.resizePaneUp",
+    "key": "cmd+shift+l",
+    "command": "workbench.action.terminal.focusNext",
     "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
-  }
+  },
+	{
+		"key": "cmd+k n",
+		"command": "scratchpads.openScratchpad"
+	}
 ]
