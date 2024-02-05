@@ -60,6 +60,11 @@
 ;; line numbers
 (setq display-line-numbers-type t)
 
+;; enables evil-search search through folded text
+;; Configuration A
+;; https://github.com/doomemacs/doomemacs/issues/6478#issuecomment-1406167570
+(setq org-fold-core-style 'text-properties)
+(evil-select-search-module 'evil-search-module 'isearch)
 
 ;; PACKAGES
 ;; ivy
@@ -83,11 +88,19 @@
   ;; allow input not in order
     '((t   . ivy--regex-ignore-order))))
 
+;; accept completion from copilot and fallback to company
+(use-package! copilot
+  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . 'copilot-accept-completion)
+              ("TAB" . 'copilot-accept-completion)
+              ("C-TAB" . 'copilot-accept-completion-by-word)
+              ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
 ;; Org mode stuff
 
 (setq org-directory "~/Documents/Notes/")
-(setq org-roam-directory "~/Documents/Notes/")
+(setq org-roam-directory "~/Documents/Notes/roam/")
 ;(setq org-archive-location "~/Documents/Notes/work-notes.org_archive")
 
 ; org-alert
