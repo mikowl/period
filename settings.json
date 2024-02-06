@@ -1,4 +1,5 @@
 {
+	"keyboard.dispatch": "keyCode",
 	"workbench.colorCustomizations": {
 		"tab.activeBorder": "#ac82f5",
 		// "tab.activeBorderTop": "#ac82f5",
@@ -7,7 +8,7 @@
 		// "activityBarBadge.background": "#8ec757",
 		"editorError.foreground": "#f9838388",
 		"editorInfo.foreground": "#00ff0088",
-		"editor.lineHighlightBackground": "#493764",
+		// "editor.lineHighlightBackground": "#493764",
 		// will change the color of three dots to transparent
 		"editorHint.foreground": "#f000",
 		// will underline the entire word with dots in your chosen color
@@ -21,7 +22,6 @@
 	"editor.tokenColorCustomizations": {
 		"comments": "#838cb8"
 	},
-	"editor.semanticHighlighting.enabled": true,
 	"workbench.tree.indent": 14,
 	"workbench.fontAliasing": "auto",
 	"workbench.settings.editor": "json",
@@ -30,6 +30,7 @@
 	"material-icon-theme.folders.color": "#a6accd",
 	"material-icon-theme.saturation": 0.7,
 	"material-icon-theme.hidesExplorerArrows": true,
+	"editor.semanticHighlighting.enabled": true,
 	// Explorer
 	"explorer.confirmDelete": false,
 	"explorer.incrementalNaming": "smart",
@@ -46,7 +47,7 @@
 		"node_modules": true
 	},
 	"editor.renderLineHighlight": "gutter",
-	"editor.occurrencesHighlight": true,
+	"editor.occurrencesHighlight": "singleFile",
 	"editor.selectionHighlight": true,
 	"editor.tabSize": 2,
 	"editor.tabCompletion": "on",
@@ -55,7 +56,7 @@
 	"editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
 	"editor.wordWrap": "off",
 	// Editor font
-	"editor.fontFamily": "'Berkeley Mono', 'Operator Mono Lig', 'MonoLisa', 'Dank Mono','JetBrains Mono','Fira Mono for Powerline', 'SF Mono','SFMono Powerline'",
+	"editor.fontFamily": "'Monaspace Neon', 'Monaspace Xenon', 'Monaspace Argon', 'Monaspace Krypton', 'Berkeley Mono', 'Operator Mono Lig', 'MonoLisa', 'Dank Mono','JetBrains Mono','Fira Mono for Powerline', 'SF Mono','SFMono Powerline'",
 	"editor.fontSize": 15,
 	"editor.fontWeight": "400",
 	"editor.renderWhitespace": "all",
@@ -78,8 +79,8 @@
 	// Code Formatting
 	"eslint.enable": true,
 	"editor.codeActionsOnSave": {
-		"source.fixAll.eslint": true,
-		"stylelint.autoFix": true
+		"source.fixAll.eslint": "never",
+		"stylelint.autoFix": "never"
 	},
 	"eslint.validate": [
 		"javascript",
@@ -123,12 +124,12 @@
 		// Use VS Code Prettier ESLint in react files
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
 		// "editor.defaultFormatter": "rvest.vs-code-prettier-eslint",
-		"editor.formatOnSave": true,
+		// "editor.formatOnSave": true,
 		"editor.formatOnSaveMode": "file"
 	},
 	"[typescriptreact]": {
 		"editor.defaultFormatter": "esbenp.prettier-vscode",
-		"editor.formatOnSave": true,
+		// "editor.formatOnSave": false,
 		"editor.formatOnSaveMode": "file"
 	},
 	"[javascript]": {
@@ -400,10 +401,6 @@
 		"javascript": "javascriptreact",
 		"typescript": "typescriptreact"
 	},
-	// Jira
-	"atlascode.jira.workingSite": {
-		"baseUrlSuffix": "atlassian.net"
-	},
 	"atlascode.jira.todoIssues.enabled": false,
 	"atlascode.jira.explorer.fetchAllQueryResults": true,
 	"atlascode.jira.startWorkBranchTemplate.customTemplate": "{{{issueKey}}}-{{{summary}}}",
@@ -423,14 +420,14 @@
 	"diffEditor.ignoreTrimWhitespace": false,
 	"github.copilot.enable": {
 		"*": true,
-		"yaml": false,
 		"plaintext": false,
 		"markdown": true,
 		"scminput": false,
+		"yaml": false,
 		"javascriptreact": true,
 		"javascript": true,
 		"html": true,
-		"typescript": true
+		"typescript": false
 	},
 	"redhat.telemetry.enabled": false,
 	"telemetry.telemetryLevel": "off",
@@ -460,6 +457,7 @@
 		"frontmatter",
 		"gameover",
 		"gari",
+		"gsap",
 		"gtag",
 		"Gummies",
 		"highlightedyank",
@@ -485,6 +483,7 @@
 		"nums",
 		"nyny",
 		"onetrust",
+		"Passcode",
 		"pescatarian",
 		"poimandres",
 		"pokeball",
@@ -506,14 +505,17 @@
 		"shortcodes",
 		"showcmd",
 		"showmodename",
+		"Skus",
 		"Smartcase",
 		"styleguide",
 		"stylelint",
+		"Swiper",
 		"tailwindcss",
 		"tanstack",
 		"textwidth",
 		"todos",
 		"trpc",
+		"typeit",
 		"uniqid",
 		"unslick",
 		"Urlq",
@@ -556,7 +558,7 @@
 	"workbench.editor.highlightModifiedTabs": true,
 	"workbench.editor.tabSizing": "shrink",
 	"workbench.layoutControl.enabled": false,
-	"editor.detectIndentation": false,
+	"editor.detectIndentation": true,
 	"svg.preview.mode": "svg",
 	"vitest.enable": true,
 	"vitest.commandLine": "npx vitest",
@@ -593,6 +595,8 @@
 		"!Split",
 		"!Split sequence"
 	],
-	"aws.telemetry": false,
-	"aws.codeWhisperer.shareCodeWhispererContentWithAWS": false
+	"workbench.preferredDarkColorTheme": "Moonlight Italic",
+	"window.commandCenter": false,
+	"console-ninja.featureSet": "Community",
+	"editor.inlineSuggest.suppressSuggestions": true
 }
